@@ -37,7 +37,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: ./project
-          file: Dockerfile
+          # according to the documentation, the file should default to {context}/Dockerfile
           platforms: linux/amd64
           push: true
           tags: millercm/techtrends:latest
