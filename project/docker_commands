@@ -1,11 +1,37 @@
 ## Docker commands used to build the application 
-# TODO: insert the docker build command
+# from inside the project directory:
+docker build -t techtrends .
 
 ## Docker commands used to run the application
-# TODO: insert the docker run command
+docker run -p 7111:3111 techtrends
 
 ## Docker commands used to get the application logs
-# TODO: insert the docker logs command
+docker ps
+docker logs 4c006b3d0c15
 
 ## Logs from the container running the TechTrends application
-# TODO: paste logs from the Docker container 
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+2021/07/22 01:26:20 +0000:werkzeug:INFO:  * Running on http://0.0.0.0:3111/ (Press CTRL+C to quit)
+2021/07/22 01:26:32 +0000:werkzeug:INFO: 172.17.0.1 - - [22/Jul/2021 01:26:32] "GET / HTTP/1.1" 200 -
+2021/07/22 01:26:34 +0000:app:INFO: Article '2020 CNCF Annual Report' retrieved!
+2021/07/22 01:26:34 +0000:werkzeug:INFO: 172.17.0.1 - - [22/Jul/2021 01:26:34] "GET /1 HTTP/1.1" 200 -
+2021/07/22 01:26:37 +0000:app:INFO: Article 'CNCF Cloud Native Interactive Landscape' retrieved!
+2021/07/22 01:26:37 +0000:werkzeug:INFO: 172.17.0.1 - - [22/Jul/2021 01:26:37] "GET /4 HTTP/1.1" 200 -
+2021/07/22 01:26:42 +0000:app:WARNING: Non-existent post id 123
+2021/07/22 01:26:42 +0000:werkzeug:INFO: 172.17.0.1 - - [22/Jul/2021 01:26:42] "GET /123 HTTP/1.1" 404 -
+2021/07/22 01:26:44 +0000:app:INFO: Page 'About Us' retrieved!
+2021/07/22 01:26:44 +0000:werkzeug:INFO: 172.17.0.1 - - [22/Jul/2021 01:26:44] "GET /about HTTP/1.1" 200 -
+2021/07/22 01:26:51 +0000:werkzeug:INFO: 172.17.0.1 - - [22/Jul/2021 01:26:51] "GET /healthz HTTP/1.1" 200 -
+2021/07/22 01:26:57 +0000:werkzeug:INFO: 172.17.0.1 - - [22/Jul/2021 01:26:57] "GET /metrics HTTP/1.1" 200 -
+2021/07/22 01:27:13 +0000:app:INFO: Page 'About Us' retrieved!
+2021/07/22 01:27:13 +0000:werkzeug:INFO: 172.17.0.1 - - [22/Jul/2021 01:27:13] "GET /about HTTP/1.1" 200 -
+2021/07/22 01:27:16 +0000:werkzeug:INFO: 172.17.0.1 - - [22/Jul/2021 01:27:16] "GET /create HTTP/1.1" 200 -
+2021/07/22 01:27:27 +0000:app:INFO: Article 'New Page' was added!
+2021/07/22 01:27:27 +0000:werkzeug:INFO: 172.17.0.1 - - [22/Jul/2021 01:27:27] "POST /create HTTP/1.1" 302 -
+2021/07/22 01:27:27 +0000:werkzeug:INFO: 172.17.0.1 - - [22/Jul/2021 01:27:27] "GET / HTTP/1.1" 200 -
+2021/07/22 01:27:31 +0000:app:INFO: Article 'New Page' retrieved!
+2021/07/22 01:27:31 +0000:werkzeug:INFO: 172.17.0.1 - - [22/Jul/2021 01:27:31] "GET /7 HTTP/1.1" 200 -
