@@ -8,7 +8,8 @@ service:
     type: ClusterIP
 
 image:
-    repository: techtrends
+    # Updating repository from project spec, "techtrends", to additionally specify the repository location/owner, "millercm"
+    repository: millercm/techtrends
     tag: latest
     pullPolicy: IfNotPresent
 
